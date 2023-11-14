@@ -2,20 +2,22 @@
 
 set -euo pipefail
 
-DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+echo "Running plugin command hook"
 
-# shellcheck source=lib/plugin.bash
-. "$DIR/../lib/plugin.bash"
+# DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
-MANDATORY_OPTION=$(plugin_read_config MANDATORY "")
+# # shellcheck source=lib/plugin.bash
+# . "$DIR/../lib/plugin.bash"
 
-if [ -z "${MANDATORY_OPTION}" ]; then
-  echo 'Missing mandatory option in the plugin'
-  exit 1
-fi
+# MANDATORY_OPTION=$(plugin_read_config MANDATORY "")
 
-OPTIONAL_OPTION=$(plugin_read_config OPTIONAL "default")
+# if [ -z "${MANDATORY_OPTION}" ]; then
+#   echo 'Missing mandatory option in the plugin'
+#   exit 1
+# fi
 
-echo "Running plugin with options:"
-echo " - mandatory: ${MANDATORY_OPTION}"
-echo " - optional: ${OPTIONAL_OPTION}"
+# OPTIONAL_OPTION=$(plugin_read_config OPTIONAL "default")
+
+# echo "Running plugin with options:"
+# echo " - mandatory: ${MANDATORY_OPTION}"
+# echo " - optional: ${OPTIONAL_OPTION}"

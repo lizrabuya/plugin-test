@@ -1,14 +1,11 @@
-name: Buildkite Plugin
+name: Plugin-test
 description: Exceptional functionality
-author: https://github.com/buildkite-plugins
+author: https://github.com/lizrabuya
 requirements:
   - bash
+  - docker
 configuration:
   properties:
-    mandatory:
-      type: string
-    optional:
-      type: string
-  required:
-    - mandatory
+    propagate-env-vars:
+      type: boolean
   additionalProperties: false
