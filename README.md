@@ -1,32 +1,13 @@
 A Buildkite plugin for something awesome
-
-## Options
-
-These are all the options available to configure this plugin's behaviour.
-
-### Required
-
-#### `mandatory` (string)
-
-A great description of what this is supposed to do.
-
-### Optional
-
-#### `optional` (string)
-
-Describe how the plugin behaviour changes if this option is not specified, allowed values and its default.
-
-## Examples
-
-Show how your plugin is to be used
+ 
+## Usage
 
 ```yaml
 steps:
   - label: "🔨 Running plugin"
-    command: "echo template plugin"
+    command: "echo plugin-test" 
     plugins:
-      - template#v1.0.0:
-          mandatory: "value"
+      - lizrabuya
 ```
 
 ## And with other options as well
@@ -36,12 +17,16 @@ If you want to change the plugin behaviour:
 ```yaml
 steps:
   - label: "🔨 Running plugin"
-    command: "echo template plugin with options"
+    command: "echo plugin-test" 
     plugins:
-      - template#v1.0.0:
-          mandatory: "value"
-          optional: "example"
+      - lizrabuya
+          propagate-env-vars: false
 ```
+## Configuration
+
+### `propagate-env-vars` (optional)
+
+Option to propagate env vars.
 
 ## ⚒ Developing
 
